@@ -1,0 +1,129 @@
+
+.skillContainer{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(19, auto);
+
+    grid-auto-flow: column;
+    width:100%;
+    padding: 10px 0 15px 0;
+    justify-content: center;
+    gap: 4px 10px;
+}
+
+
+.skill{
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: auto 100px auto  ;
+    width:100%;
+    font-size: 7pt;
+    word-spacing:-3px;
+    align-items: center;
+    color: var(--red);
+}
+.skill > input[type="checkbox"]{
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--red);
+    position: relative;
+    cursor: pointer;
+    margin-right:5px;
+}
+.skill > [type="checkbox"]:hover{
+    border:var(--red) 2px solid; 
+}
+.skill > input[type="checkbox"]:checked::after {
+    content: "✓";
+    position: absolute;
+    color: var(--text);
+    font-size: 20px;
+    font-weight: bold;
+    left: 0px;
+    top: -10px;
+}
+.skill > input[type="checkbox"]:checked:hover::after{
+    left:-1px;
+    top:-11.5px;
+} 
+.skillValsTable{  
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-left: 15px;
+}
+section.skillContainer .skillValsTable { max-width: 25px;}
+
+
+.skillValsTable td{
+    border: solid 1px var(--red);
+
+}
+.skillValsTable tr input[type="text"]{
+    all: unset;
+    font-size: 7.5pt;
+    max-width:25px;
+    text-align: center;
+    color:var(--text);
+}
+.skillNameContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: 25px;
+    justify-content: center;
+}
+
+.skillName {
+    min-width: max-content;
+    height: 18px;
+}
+
+.skillName input {
+    all: unset;
+    width: 70px;
+    padding-left: 1px;
+    font-weight: 900;
+    color: var(--text);
+    border-bottom: 1px solid var(--red);
+    line-height: 14px;
+    font-size: 7pt;
+    font-weight: bold;
+    transform: translateY(-2px);}
+
+.skillNamePlaceholder {
+    font-size: 8px;
+    line-height: 15px;
+    font-weight: normal;
+    font-style: italic;
+    color: var(--red);
+    opacity: 70%;
+    white-space: nowrap;
+}
+.skillNameSubName {
+    font-size: 8px;
+    line-height: 8px;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+/* Rounds the corners for each skill */
+section.skillContainer  tr.skillVals > td:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+section.skillContainer  tr.skillVals > td:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+@media (width <= 402px) {
+    .skillContainer {
+   grid-template-columns: auto;
+        grid-template-rows: none;
+        grid-auto-flow: row;
+    }
+}

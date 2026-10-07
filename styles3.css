@@ -1,0 +1,159 @@
+@import "./skills.css";
+/* @import "./bio.css";
+ */* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --background: #F2EFE5;
+    --red: #b41515;
+    --text: #1D2428;
+    --subtext: #55564f;
+}
+html, body{
+    min-height:100%;
+    min-width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a2a2e;
+    min-height: 100vh;
+}
+
+.tilingPaper  {
+  background-image: url("./continousFormPaper.png");
+  background-size: 100%;
+  filter:drop-shadow(1px 1px 4px #111) brightness(95%) sepia(20%);
+
+  line-height: 16pt;
+  color: #000000;
+  --link-decoration: none;
+  --link-color: rgb(0, 0, 0);
+  --link-color-hover: rgb(184, 184, 184);
+}
+
+header, footer, .recordHeader{ 
+font-family: "Tw Cen MT", "Arial Narrow", Arial, sans-serif;
+}
+header{
+    background-color:dimgray;
+    color: white;
+    width: 100%;
+    filter:drop-shadow(1px 1px 4px #111) brightness(95%);
+}
+
+ .recordHeader{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    color: var(--text);
+    width:100%;
+    flex: 1 1 0;
+    font-size: 8pt;
+    line-height: 1;
+    padding-left:1px;
+}                      
+
+.headerText{
+    color: var(--red);
+}
+.headerText p:nth-child(1) {font-weight: bold; font-size: 18pt; letter-spacing: -1px;}
+.headerText p:nth-child(2) {font-size: 12pt;letter-spacing: 0px;}
+.headerText p:nth-child(3) {font-size: 10pt; font-weight: bold; letter-spacing: .5px; font-family:'Courier New', Courier, monospace;}
+.headerText p:nth-child(4) { margin-top: 5px; font-weight: bold;  font-family: 'Courier New', Courier, monospace;}
+.headerText p:nth-child(5) {    
+    color: var(--red); 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 7pt;
+    font-weight: bold;  
+    word-spacing: -1px;
+}
+
+
+main { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height:100vh;
+    height:100%;
+    width: 100%;
+    max-width: 95vw;
+    margin: 15px 0;
+    padding:0 30px;
+}
+
+.section{
+    border-top: solid 1px var(--red);
+    border-bottom: solid 1px var(--red);
+
+    width:100%;
+    margin:5px;
+    padding:10px;
+}
+
+
+footer{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width:100%;
+    max-width: 100%;
+    border-top: 1px solid var(--red);
+    color: var(--red);
+    margin-bottom:8px;
+
+}
+footer h4{font-weight: normal; font-size: 12pt; margin-top:-3px;}
+footer p {
+    font-size: 7.5pt;
+    line-height: 1;
+    margin: 0 8px 0 8px;
+}
+
+
+@media print {
+    @page {
+        size: 8.5in 11in;
+        margin: 0;
+    }
+
+    html,
+    body {
+        width: 8.5in;
+        margin: 0;
+        padding: 0;
+    }
+
+    body > * {
+        display: none !important;
+    }
+
+    main {
+        display: block !important;
+        width: 8.5in;
+        height: 11in;
+        max-width: none;
+        min-height: 0;
+        margin: 0 ;
+        padding: 0;
+    }
+
+    .tilingPaper {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0 38px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+@media (width >= 1200px) {
+    main{
+        max-width:7.6in;
+    }
+}
